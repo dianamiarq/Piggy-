@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-palette="lagoon">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Piggy</title>
+    <meta name="description" content="Piggy: a private expense tracker that saves toward a home. Your data stays on this device." />
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0D1E29" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+
+    <!-- iOS: home-screen app, full screen, own name and icon -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Piggy" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <style>
+      /* Keep content clear of the notch and home indicator in standalone mode. */
+      :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+      html, body { margin: 0; }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Piggy needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

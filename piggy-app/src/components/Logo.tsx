@@ -1,0 +1,23 @@
+import React from 'react';
+
+/** Piggy: a little piggy bank with a coin dropping into the slot. */
+export const Logo: React.FC<{ size?: number }> = ({ size = 28 }) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
+    {/* coin */}
+    <circle cx="35" cy="10.5" r="7" fill="#F6BD60" />
+    <circle cx="35" cy="10.5" r="4.4" fill="none" stroke="#D99A2B" strokeWidth="1.6" />
+    {/* body */}
+    <path d="M12 36c0-10 9.5-17 21.5-17S55 25.5 55 35.5c0 6-3 10.5-7.5 13.5V55a2.5 2.5 0 0 1-2.5 2.5h-4.5A2.5 2.5 0 0 1 38 55v-3c-1.4.2-2.9.3-4.5.3s-3.3-.1-4.8-.4V55a2.5 2.5 0 0 1-2.5 2.5h-4.5a2.5 2.5 0 0 1-2.5-2.5v-6.4c-2.1-1.6-3.8-3.6-4.8-5.9H11a3 3 0 0 1-3-3v-4.4a3 3 0 0 1 3-3h1.4" fill="#F5A3B0" />
+    {/* ear */}
+    <path d="M20.5 24.5 18 15.5l8.5 4.5" fill="#F5A3B0" />
+    <path d="M20.6 22.7 19.5 18.7l3.7 2" fill="#E77F95" />
+    {/* snout */}
+    <rect x="5.5" y="31" width="9" height="9" rx="4.2" fill="#E77F95" />
+    <circle cx="8.6" cy="35.5" r="1.1" fill="#0D1E29" opacity=".55" />
+    <circle cx="11.6" cy="35.5" r="1.1" fill="#0D1E29" opacity=".55" />
+    {/* eye, slot, tail */}
+    <circle cx="21" cy="30" r="1.8" fill="#0D1E29" />
+    <rect x="29" y="21.5" width="12" height="2.6" rx="1.3" fill="#C9586F" />
+    <path d="M55 33c3.5-.5 4.5-4 2-5.2-2-1-3.3 1.6-1.4 2.7" fill="none" stroke="#E77F95" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
